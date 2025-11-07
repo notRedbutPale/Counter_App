@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8e7;
+    color: #333;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* vertically center the container */
+    align-items: center;     /* horizontally center */
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avocado {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: #6dbb6d;
+  border-radius: 50% 50% 45% 55% / 60% 60% 40% 40%;
+  box-shadow: inset 0 0 10px #558b2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  
+  margin-bottom: 20px; /* <-- added moderate gap */
+}
+
+
+.pit {
+  width: 90px;
+  height: 90px;
+  background: #8b5e3c;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px #5d4037;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#count {
+  font-size: 2em;
+  color: #fffde7;
+  font-weight: bold;
+}
+
+
+.buttons {
+  display: flex;      
+       /* arrange buttons in a row */
+  justify-content: center; /* center the buttons */
+  gap: 15px;               /* space between buttons */
+  margin-bottom: 20px;     /* optional space below the row */
+}
+
+/* each row of buttons/input will be centered horizontally */
+.custom-add {
+  display: flex;
+  justify-content: center;
+  gap: 10px;           /* space between input and button */
+  margin-bottom: 20px; /* space below the row */
+}
+.extras {
+  display: flex;
+  justify-content: center;
+  gap: 10px;           /* space between each button */
+}
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #388e3c;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #8bc34a;
+  text-align: center;
+  width: 120px;
+}
+
+#reset {
+  background-color: #8bc34a;
+}
+
+#reset:hover {
+  background-color: #689f38;
+}
+
+#deleteSaved {
+  background-color: #f44336;
+}
+
+#deleteSaved:hover {
+  background-color: #d32f2f;
+}
+
+#saveCount {
+  background-color: #2196f3;
+}
+
+#saveCount:hover {
+  background-color: #1976d2;
+}
+
+body.dark {
+  background: #1b1b1b;
+  color: #f0f0f0;
+}
+
+body.dark .avocado {
+  background: #388e3c;
+  box-shadow: inset 0 0 10px #1b5e20;
+}
+
+body.dark button {
+  background-color: #43a047;
+}
+
+body.dark #deleteSaved {
+  background-color: #e53935;
+}
+
+body.dark #saveCount {
+  background-color: #42a5f5;
+}
+
+body.dark #reset {
+  background-color: #9ccc65;
+}
+
+.avocado::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 100px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
